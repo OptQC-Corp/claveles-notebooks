@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Tutorials target the latest published claveles release, so dependencies are
+# resolved fresh rather than pinned.
+uv.lock
+
+.DS_Store

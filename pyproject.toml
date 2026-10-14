@@ -1,0 +1,31 @@
+[project]
+name = "claveles-notebooks"
+version = "0.1.0"
+description = "Demo Notebooks for Continuous-Variable Quantum Computing with Claveles"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "claveles",
+    "matplotlib>=3.10.8,<4.0",
+    "numpy>=2.4.4,<3.0",
+    "pandas>=3.0.2,<4.0",
+    "scipy>=1.17.1,<1.18",
+    "seaborn>=0.13.2,<1.0",
+]
+
+authors = [{ name = "OptQC Corp.", email = "oss@optqc.com" }]
+license = "Apache-2.0"
+
+[dependency-groups]
+dev = ["ipykernel>=7.2.0", "nb-clean>=4.0.1", "ruff>=0.15.9"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint.pycodestyle]
+max-line-length = 100 # E501 が反応する境界線
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E203"]
